@@ -11,10 +11,10 @@
 
 @section('content')
 <style type="text/css">
-		label{
-			color: black;
-		}
-	</style>
+    label{
+      color: black;
+    }
+  </style>
  <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -51,40 +51,40 @@
               </div>
               <a href="#" class="small-box-footer" data-toggle="modal" data-target="#addmovie">Add New Client <i class="fa fa-arrow-circle-right"></i></a>
               <!-- Modal -->
-				<div class="modal fade" id="addmovie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Add New Client</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        {!! Form::open(['method' => 'POST', 'route' => 'client.post', 'files' => 'true']) !!}
-				            <div class="form-group{{ $errors->has('companyname') ? ' has-error' : '' }}">
-				                {!! Form::label('companyname', 'Company Name') !!}
-				                {!! Form::text('companyname', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('companyname') }}</small>
-				            </div>
+        <div class="modal fade" id="addmovie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Add New Client</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                {!! Form::open(['method' => 'POST', 'route' => 'client.post', 'files' => 'true']) !!}
+                    <div class="form-group{{ $errors->has('companyname') ? ' has-error' : '' }}">
+                        {!! Form::label('companyname', 'Company Name') !!}
+                        {!! Form::text('companyname', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('companyname') }}</small>
+                    </div>
 
-				            <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-				                {!! Form::label('address', 'Address') !!}
-				                {!! Form::text('address', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('address') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                        {!! Form::label('address', 'Address') !!}
+                        {!! Form::text('address', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('address') }}</small>
+                    </div>
 
-				            <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-				                {!! Form::label('city', 'City') !!}
-				                {!! Form::text('city', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('city') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+                        {!! Form::label('city', 'City') !!}
+                        {!! Form::text('city', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('city') }}</small>
+                    </div>
 
-				            <div class="form-group{{ $errors->has('zip') ? ' has-error' : '' }}">
-				                {!! Form::label('zip', 'Zip Code') !!}
-				                {!! Form::text('zip', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('zip') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('zip') ? ' has-error' : '' }}">
+                        {!! Form::label('zip', 'Zip Code') !!}
+                        {!! Form::text('zip', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('zip') }}</small>
+                    </div>
 
                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                         <label>Enter Your Phone Number</label>
@@ -108,45 +108,45 @@
                           </select>
                         </div>
 
-				            <div class="form-group{{ $errors->has('gstin') ? ' has-error' : '' }}">
-				                {!! Form::label('gstin', 'GSTIN Number') !!}
-				                {!! Form::text('gstin', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('gstin') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('gstin') ? ' has-error' : '' }}">
+                        {!! Form::label('gstin', 'GSTIN Number') !!}
+                        {!! Form::text('gstin', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('gstin') }}</small>
+                    </div>
 
-				            <div class="form-group{{ $errors->has('pan') ? ' has-error' : '' }}">
-				                {!! Form::label('pan', 'Pan Number') !!}
-				                {!! Form::text('pan', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('pan') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('pan') ? ' has-error' : '' }}">
+                        {!! Form::label('pan', 'Pan Number') !!}
+                        {!! Form::text('pan', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('pan') }}</small>
+                    </div>
 
-				            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-				                {!! Form::label('name', 'Name') !!}
-				                {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('name') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        {!! Form::label('name', 'Name') !!}
+                        {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('name') }}</small>
+                    </div>
 
 
-				            <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
-				                {!! Form::label('website', 'Website') !!}
-				                {!! Form::text('website', null, ['class' => 'form-control', 'required' => 'required']) !!}
-				                <small class="text-danger">{{ $errors->first('website') }}</small>
-				            </div>
+                    <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
+                        {!! Form::label('website', 'Website') !!}
+                        {!! Form::text('website', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                        <small class="text-danger">{{ $errors->first('website') }}</small>
+                    </div>
                     
-				      </div>
-				      <div class="modal-footer">
-				      	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				      		<div class="btn-group float-left">
-				                
-				                {!! Form::submit("Submit", ['class' => 'btn btn-success']) !!}
-				            </div>
-				        
-				        {!! Form::close() !!}
-				        
-				      </div>
-				    </div>
-				  </div>
-				</div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <div class="btn-group float-left">
+                        
+                        {!! Form::submit("Submit", ['class' => 'btn btn-success']) !!}
+                    </div>
+                
+                {!! Form::close() !!}
+                
+              </div>
+            </div>
+          </div>
+        </div>
             </div>
           </div>
          
@@ -184,46 +184,83 @@
                 <table class="table table-hover">
                   <tr>
                     <th>Company name</th>
-                    <th>Address</th>
-                    <th>Zip</th>
-                    <th>GSTIN</th>
-                    <th>Pan</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
                     <th>Website</th>
-
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th width="12%">Show Detail</th>
+                    <th width="10%">Edit</th>
+                    <th width="10%">Delete</th>
                   </tr>
                   @forelse($clients as $client)
                   <tr>
                     <td>{{ $client->companyname }}</td>
-                    <td>{{ $client->address }}</td>
-                    <td>{{ $client->zip }}</td>
-                    <td>{{ $client->gstin }}</td>
-                    <td>{{ $client->pan }}</td>
-                    <td>{{ $client->name }}</td>
-                    <td>
-                      <ol>
-                        @foreach($client->phones as $phone)
-                        <li>
-                          {{ $phone->phone }}
-                        </li>
-                        @endforeach
-                      </ol>
-                    </td>
-                    <td>
-                      <ol>
-                        @foreach($client->emails as $email)
-                        <li>
-                          {{ $email->email }}
-                        </li>
-                        @endforeach
-                      </ol>
-                    </td>
-                    <td>{{ $client->email }}</td>
+                   
+                    
                     <td>{{ $client->website }}</td>
+                    <td><button class="btn btn-info" data-toggle="modal" data-target="#show-{{ $client->id }}">Show</button></td>
+                    <div class="modal fade" id="show-{{ $client->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Show Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>Company Name : {{ $client->companyname }}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Address : {{ $client->address }}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Name : {{ $client->name }}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Website : {{ $client->website }}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>
+                        Emails :
+                        <ol>
+                          <li>
+                            @foreach($client->emails as $email)
+                              {{ $email->email }}
+                            @endforeach
+                          </li>
+                      </ol>
+                      </p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>
+                        Phones :
+                        <ol>
+                          @foreach($client->phones as $phone)
+                            <li>
+                              {{ $phone->phone }}
+                            </li>
+                          @endforeach
+                      </ol>
+                      </p>
+                    </div>
+                  </div>
+                    
+                    
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <div class="btn-group float-left">
+                        
+                        {!! Form::submit("Submit", ['class' => 'btn btn-success']) !!}
+                    </div>
+                
+                {!! Form::close() !!}
+                
+              </div>
+            </div>
+          </div>
+        </div>
                     <td><button class="btn btn-warning" data-toggle="modal" data-target="#edit-{{ $client->id }}">Edit</button></td>
                     <div class="modal fade" id="edit-{{ $client->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
@@ -260,6 +297,28 @@
                         <small class="text-danger">{{ $errors->first('zip') }}</small>
                     </div>
 
+                    <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                        <label>Enter Your Phone Number</label>
+                          <select class="form-control phone" multiple="multiple" data-placeholder="Add Your Phone"
+                                  style="width: 100%;" name="phone[]">
+                           @foreach($client->phones as $phone)
+                              <option value="{{ $phone->phone }}" selected>{{ $phone->phone }}</option>
+                           @endforeach
+                           
+                          </select>
+                        </div>
+
+                      <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                        <label>Enter Your Email</label>
+                          <select class="form-control phone" multiple="multiple" data-placeholder="Enter Your Email"
+                                  style="width: 100%;" name="email[]">
+                           @foreach($client->emails as $email)
+                              <option value="{{ $email->email }}" selected>{{ $email->email }}</option>
+                            @endforeach
+                           
+                          </select>
+                        </div>
+
                     <div class="form-group{{ $errors->has('gstin') ? ' has-error' : '' }}">
                         {!! Form::label('gstin', 'GSTIN Number') !!}
                         {!! Form::text('gstin', null, ['class' => 'form-control', 'required' => 'required']) !!}
@@ -278,17 +337,6 @@
                         <small class="text-danger">{{ $errors->first('name') }}</small>
                     </div>
 
-                    <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                        {!! Form::label('phone', 'Phone Number') !!}
-                        {!! Form::number('phone', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                        <small class="text-danger">{{ $errors->first('phone') }}</small>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        {!! Form::label('email', 'Email address') !!}
-                        {!! Form::email('email', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'eg: foo@bar.com']) !!}
-                        <small class="text-danger">{{ $errors->first('email') }}</small>
-                    </div>
 
                     <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
                         {!! Form::label('website', 'Website') !!}
@@ -324,9 +372,9 @@
                   </tr>
                   @endforelse
                 </table>
-               	<div style="padding-left: 40px;">
-               		{!! $clients->render() !!}
-               	</div>
+                <div style="padding-left: 40px;">
+                  {!! $clients->render() !!}
+                </div>
               </div>
               <!-- /.card-body -->
             </div>
